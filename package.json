@@ -1,0 +1,25 @@
+{
+  "name": "eligibility-check",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Insurance-eligibility verification demo — React + TypeScript + Node + SQL",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel --filter ./apps/* dev",
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "db:seed": "pnpm --filter @eligibility/api db:seed"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "esbuild"
+    ]
+  }
+}
